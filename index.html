@@ -19,7 +19,6 @@
             color: var(--text);
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
-            /* Prevent scrolling horizontally on mobile */
             width: 100vw; 
         }
 
@@ -91,7 +90,7 @@
         /* --- BUTTONS --- */
         .btn-group { 
             margin-top: 40px; 
-            height: 150px; /* More space for the button to run */
+            height: 150px; 
             position: relative; 
             width: 100%; 
             display: flex; 
@@ -106,10 +105,9 @@
         }
         .yes-btn { background: var(--accent); color: #000; font-weight: bold; }
         
-        /* The Runaway Button Style */
         #noBtn {
             position: absolute; 
-            transition: all 0.1s ease; /* Super fast movement */
+            transition: all 0.1s ease; 
         }
 
     </style>
@@ -129,13 +127,30 @@
     <div class="fixed-bg"></div>
 
     <section>
-        <div class="photo-frame" style="transform: rotate(2deg);">
-            <img src="flight.jpg" alt="Plane" style="transform: rotate(180deg);">
+        <div class="photo-frame" style="transform: rotate(-2deg); margin-bottom: -40px; z-index: 1;">
+            <img src="ramada1.jpg" alt="Swing">
         </div>
-        <h1>For Life.</h1>
+        <div class="photo-frame" style="transform: rotate(2deg); z-index: 2;">
+            <img src="start.jpg" alt="Start">
+        </div>
+        <h1>29.03.2025</h1>
         <div class="letter-text">
-            It's been one year. One year of us. From that first flight to Arusha to right now.<br><br>
-            But looking at this picture? I know this isn't just a "phase." If we've made it this far, we are making it all the way. <strong>One year means we are in this for life.</strong>
+            Ramada Hotel. The day it all began.<br><br>
+            I remember how nervous you were. "Deep shy," you called it. You could barely look at me without blushing. But even in that shyness, I saw it. I saw <i>us</i>. That was the moment my life changed forever.
+        </div>
+    </section>
+
+    <section>
+        <div class="photo-frame" style="transform: rotate(1deg);">
+            <img src="collage1.jpg" alt="Flight Memories">
+        </div>
+        <div class="photo-frame" style="transform: rotate(-1deg); width: 70vw; margin-top:-30px; z-index:2;">
+            <img src="collage2.jpg" alt="More Flight Memories">
+        </div>
+        <h1>The Journey.</h1>
+        <div class="letter-text">
+            From that first nervous day to our first flight to Arusha. Look at these moments. Look at us.<br><br>
+            If we've made it this far, through the miles and the madness, we are making it all the way. <strong>One year means for life.</strong>
         </div>
     </section>
 
@@ -151,28 +166,63 @@
     </section>
 
     <section>
-        <div class="photo-frame" style="transform: rotate(1deg);">
-            <img src="muse.jpg" alt="Muse">
+        <div class="photo-frame" style="transform: rotate(3deg); margin-bottom: -50px; z-index: 1;">
+            <img src="hands1.jpg" alt="Hands Crochet">
         </div>
-        <h1>Not "Superficial Love".</h1>
+        <div class="photo-frame" style="transform: rotate(-2deg); z-index: 2;">
+            <img src="hands2.jpg" alt="Hands Jeep">
+        </div>
+        <h1>Unbreakable.</h1>
         <div class="letter-text">
-            You know that Ruth B song "Superficial Love"? Well, look at us. This ain't that.<br><br>
-            You look flawless here, sure. But what I love isn't just the face. It's the woman behind it. It's deep. It's real. And it's the only thing that matters.
+            Whether we are in a Jeep in the middle of nowhere or just laying in bed... my hand fits in yours like it was made for it.<br><br>
+            I am never letting go.
         </div>
     </section>
 
     <section>
-        <div class="photo-frame" style="transform: rotate(3deg); margin-bottom: -40px; z-index: 1;">
-            <img src="smile.jpeg" alt="Smiling">
+        <div class="photo-frame" style="transform: rotate(-1deg);">
+            <img src="fit.jpg" alt="The Fit">
         </div>
-        <div class="photo-frame" style="transform: rotate(-3deg); z-index: 2;">
-            <img src="hidingsmile.jpeg" alt="Hiding Smile">
+        <div class="photo-frame" style="transform: rotate(2deg); width: 60vw; margin-top: -20px;">
+            <img src="goofy.jpg" alt="Goofy">
         </div>
-        
-        <h1 style="margin-top: 20px;">Your Joy.</h1>
+        <h1>The Real You.</h1>
         <div class="letter-text">
-            My goal is to protect this smile. Whether you are beaming... or trying to hide it from me.<br><br>
-            You light up my world in every single frame.
+            I know you hate that first picture, but I love it. And the second one? That's the side of you only I get to see.<br><br>
+            Sassy. Goofy. Real. You are my favorite person to annoy.
+        </div>
+    </section>
+
+    <section>
+        <div class="photo-frame" style="transform: rotate(2deg);">
+            <img src="calls.jpg" alt="Missed Calls">
+        </div>
+        <h1>Fan Behavior.</h1>
+        <div class="letter-text">
+            "I'm not obsessed with you, Baba Maembe." Oh really?<br><br>
+            The call logs don't lie! Look at this. You can play cool all you want, but I know the truth: <strong>You are my biggest fan.</strong> (And I love it).
+        </div>
+    </section>
+
+    <section>
+        <div class="photo-frame" style="transform: rotate(1deg);">
+            <img src="pool.jpg" alt="Pool">
+        </div>
+        <h1>Deep Waters.</h1>
+        <div class="letter-text">
+            Late night talks by the pool. Teaching you how to swim. Just us, the water, and the truth.<br><br>
+            Those quiet moments are where I fell even deeper in love with you.
+        </div>
+    </section>
+
+    <section>
+        <div class="photo-frame" style="transform: rotate(-2deg);">
+            <img src="cuddle.jpg" alt="Intimate">
+        </div>
+        <h1>Skin to Skin.</h1>
+        <div class="letter-text">
+            This moment... it wasn't just intimacy. It was a promise. <br><br>
+            Skin to skin. Vulnerable. Trusting. That was the moment I knew you were mine, and I was yours completely.
         </div>
     </section>
 
@@ -192,10 +242,21 @@
         <div class="photo-frame" style="transform: rotate(-2deg);">
             <img src="care.JPG" alt="Care">
         </div>
+        <h1>Little Things.</h1>
+        <div class="letter-text">
+            Just drinking Boba and playing games. You were carefully fixing the card on my head so I wouldn't cheat.<br><br>
+            It's these tiny, gentle moments where you take care of me that make me realize how lucky I am.
+        </div>
+    </section>
+
+    <section>
+        <div class="photo-frame" style="transform: rotate(1deg);">
+            <img src="future.jpg" alt="Maturity">
+        </div>
         <h1>My Future.</h1>
         <div class="letter-text">
-            We were just drinking Boba and playing games. You were carefully fixing the card on my head so I wouldn't cheat.<br><br>
-            It was a silly moment, but I saw it clearly. That care? That patience? <strong>I see the mother of my children.</strong> I see my family.
+            Look at you. I see so much growth in this face. I see grace. I see maturity.<br><br>
+            You might not see it yet, but I do. When I look at this picture, I don't just see a girlfriend. <strong>I see the mother of my children.</strong> I see the woman I want to grow old with.
         </div>
     </section>
 
@@ -223,7 +284,6 @@
     </div>
 
     <script>
-        // Start Experience
         function startExperience() {
             const screen = document.getElementById('start-screen');
             screen.style.opacity = '0';
@@ -233,7 +293,6 @@
             audio.play().catch(e => console.log("Audio failed to play"));
         }
 
-        // Scroll Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) entry.target.classList.add('visible');
@@ -241,41 +300,27 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('section').forEach(s => observer.observe(s));
 
-        // --- THE ADVANCED NO BUTTON (IPHONE READY) ---
+        // --- IPHONE NO BUTTON ---
         const noBtn = document.getElementById('noBtn');
         const phrases = ["Try Again!", "Oops!", "Too Slow!", "Nope!", "Big Mama Pls"];
         
-        // Function to move the button
         function runAway() {
-            // Get screen dimensions
-            const maxX = window.innerWidth - 100; // Keep inside width
-            const maxY = 100; // Limit vertical movement so it doesn't disappear
-            
+            const maxX = window.innerWidth - 100;
+            const maxY = 100;
             const randomX = Math.random() * (maxX - 20) + 10;
-            const randomY = Math.random() * (maxY * 2) - maxY; // Move up or down slightly
-
-            // Apply movement
+            const randomY = Math.random() * (maxY * 2) - maxY;
+            
             noBtn.style.left = `${randomX}px`;
             noBtn.style.top = `${randomY}px`;
-            
-            // Random Text & Color
             noBtn.innerText = phrases[Math.floor(Math.random() * phrases.length)];
             noBtn.style.borderColor = "#ff4444";
             noBtn.style.color = "#ff4444";
         }
 
-        // Add both Mouse and Touch events for iPhone support
-        noBtn.addEventListener('mouseover', runAway); // For computers
-        noBtn.addEventListener('touchstart', (e) => { // For iPhones
-            e.preventDefault(); // Stop it from actually clicking
-            runAway();
-        });
-        noBtn.addEventListener('click', (e) => {
-             e.preventDefault();
-             runAway();
-        });
+        noBtn.addEventListener('mouseover', runAway);
+        noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); runAway(); });
+        noBtn.addEventListener('click', (e) => { e.preventDefault(); runAway(); });
 
-        // Reveal Twist
         function revealTwist() {
             document.getElementById('twist-overlay').style.display = 'flex';
         }
