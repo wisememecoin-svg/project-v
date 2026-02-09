@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>For Big Mama ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -19,6 +19,8 @@
             color: var(--text);
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
+            /* Prevent scrolling horizontally on mobile */
+            width: 100vw; 
         }
 
         /* --- START SCREEN --- */
@@ -58,7 +60,7 @@
         }
         section.visible { opacity: 1; transform: translateY(0); }
 
-        /* --- PHOTOS --- */
+        /* --- PHOTOS & VIDEO FRAME --- */
         .photo-frame {
             width: 85vw; max-width: 380px;
             padding: 10px; background: #fff;
@@ -66,10 +68,12 @@
             transform: rotate(-1deg);
             box-shadow: 0 10px 40px rgba(0,0,0,0.6);
             transition: transform 0.3s;
+            overflow: hidden;
         }
         .photo-frame:hover { transform: scale(1.02) rotate(0deg); }
         img { width: 100%; display: block; }
-        
+        video { width: 100%; display: block; object-fit: cover; }
+
         /* --- TYPOGRAPHY --- */
         h1 {
             font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;
@@ -85,14 +89,29 @@
         }
 
         /* --- BUTTONS --- */
-        .btn-group { margin-top: 40px; height: 60px; display: flex; gap: 20px; justify-content: center; width: 100%; }
+        .btn-group { 
+            margin-top: 40px; 
+            height: 150px; /* More space for the button to run */
+            position: relative; 
+            width: 100%; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        }
         .btn {
             padding: 15px 40px; border-radius: 4px; border: 1px solid var(--accent);
             font-size: 1rem; cursor: pointer; text-transform: uppercase;
-            background: transparent; color: var(--accent); transition: 0.3s;
+            background: transparent; color: var(--accent); transition: 0.2s;
+            z-index: 10;
         }
         .yes-btn { background: var(--accent); color: #000; font-weight: bold; }
         
+        /* The Runaway Button Style */
+        #noBtn {
+            position: absolute; 
+            transition: all 0.1s ease; /* Super fast movement */
+        }
+
     </style>
 </head>
 <body>
@@ -113,10 +132,10 @@
         <div class="photo-frame" style="transform: rotate(2deg);">
             <img src="flight.jpg" alt="Plane" style="transform: rotate(180deg);">
         </div>
-        <h1>One Year.</h1>
+        <h1>For Life.</h1>
         <div class="letter-text">
-            It's been a whole year since we started this journey. From that first flight to Arusha to right now.<br><br>
-            I look at this picture and I remember how excited we were. I want us to get back to that feeling.
+            It's been one year. One year of us. From that first flight to Arusha to right now.<br><br>
+            But looking at this picture? I know this isn't just a "phase." If we've made it this far, we are making it all the way. <strong>One year means we are in this for life.</strong>
         </div>
     </section>
 
@@ -124,10 +143,10 @@
         <div class="photo-frame" style="transform: rotate(-1deg);">
             <img src="light.jpg" alt="Us" style="transform: rotate(180deg);">
         </div>
-        <h1>Baba Maembe's Confession.</h1>
+        <h1>The Storm.</h1>
         <div class="letter-text">
-            I know December was tough. I know I haven't been the easiest person to love lately (I can see that look on your face).<br><br>
-            Sometimes I feel incompetent, like I'm not yet the man "Big Mama" deserves. But I promise you: <strong>I am straightening things out.</strong> I am building a future for us.
+            I won't lie—from December until today, it hasn't been easy. It's been a storm. I know I haven't been the easiest person to love lately.<br><br>
+            But look at us. We are still standing. I love you through the rough patches, the bad days, and the ugly moments. Nothing is shaking me. <strong>I'm still here.</strong>
         </div>
     </section>
 
@@ -137,8 +156,8 @@
         </div>
         <h1>Not "Superficial Love".</h1>
         <div class="letter-text">
-            I know you love your Ruth B songs, but listen... unlike that song, there is nothing "Superficial" about this.<br><br>
-            You look like a model here, but what we have is real. It's deep. It's the only thing that matters.
+            You know that Ruth B song "Superficial Love"? Well, look at us. This ain't that.<br><br>
+            You look flawless here, sure. But what I love isn't just the face. It's the woman behind it. It's deep. It's real. And it's the only thing that matters.
         </div>
     </section>
 
@@ -158,13 +177,25 @@
     </section>
 
     <section>
+        <div class="photo-frame" style="transform: rotate(2deg);">
+            <video autoplay loop muted playsinline>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h1>In Motion.</h1>
+        <div class="letter-text">
+            Photos are great, but seeing you in motion? That is a whole different kind of magic.
+        </div>
+    </section>
+
+    <section>
         <div class="photo-frame" style="transform: rotate(-2deg);">
             <img src="care.JPG" alt="Care">
         </div>
         <h1>My Future.</h1>
         <div class="letter-text">
-            This photo captures everything. We were just chilling, but you stopped to fix my hair.<br><br>
-            That care? That gentleness? When I look at you, I don't just see a girlfriend. <strong>I see the mother of my children.</strong>
+            We were just drinking Boba and playing games. You were carefully fixing the card on my head so I wouldn't cheat.<br><br>
+            It was a silly moment, but I saw it clearly. That care? That patience? <strong>I see the mother of my children.</strong> I see my family.
         </div>
     </section>
 
@@ -176,7 +207,7 @@
         
         <div class="btn-group">
             <button class="btn yes-btn" onclick="revealTwist()">YES ❤️</button>
-            <button class="btn" id="noBtn" onmouseover="dodgeCursor()" style="border-color:#555; color:#555;">NO</button>
+            <button class="btn" id="noBtn">NO</button>
         </div>
     </section>
 
@@ -192,16 +223,17 @@
     </div>
 
     <script>
+        // Start Experience
         function startExperience() {
             const screen = document.getElementById('start-screen');
             screen.style.opacity = '0';
             setTimeout(() => { screen.style.display = 'none'; }, 800);
-
             const audio = document.getElementById('loveSong');
             audio.volume = 0.5;
             audio.play().catch(e => console.log("Audio failed to play"));
         }
 
+        // Scroll Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) entry.target.classList.add('visible');
@@ -209,15 +241,41 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('section').forEach(s => observer.observe(s));
 
+        // --- THE ADVANCED NO BUTTON (IPHONE READY) ---
         const noBtn = document.getElementById('noBtn');
-        const phrases = ["Big Mama Stop!", "Not an option!", "Baba Maembe says no!", "Try again!"];
-        function dodgeCursor() {
-            const x = (Math.random() * 200) - 100;
-            const y = (Math.random() * 200) - 100;
-            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        const phrases = ["Try Again!", "Oops!", "Too Slow!", "Nope!", "Big Mama Pls"];
+        
+        // Function to move the button
+        function runAway() {
+            // Get screen dimensions
+            const maxX = window.innerWidth - 100; // Keep inside width
+            const maxY = 100; // Limit vertical movement so it doesn't disappear
+            
+            const randomX = Math.random() * (maxX - 20) + 10;
+            const randomY = Math.random() * (maxY * 2) - maxY; // Move up or down slightly
+
+            // Apply movement
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+            
+            // Random Text & Color
             noBtn.innerText = phrases[Math.floor(Math.random() * phrases.length)];
+            noBtn.style.borderColor = "#ff4444";
+            noBtn.style.color = "#ff4444";
         }
 
+        // Add both Mouse and Touch events for iPhone support
+        noBtn.addEventListener('mouseover', runAway); // For computers
+        noBtn.addEventListener('touchstart', (e) => { // For iPhones
+            e.preventDefault(); // Stop it from actually clicking
+            runAway();
+        });
+        noBtn.addEventListener('click', (e) => {
+             e.preventDefault();
+             runAway();
+        });
+
+        // Reveal Twist
         function revealTwist() {
             document.getElementById('twist-overlay').style.display = 'flex';
         }
